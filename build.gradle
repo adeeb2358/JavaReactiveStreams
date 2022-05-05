@@ -15,10 +15,16 @@ repositories {
 
 dependencies {
 
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+
     // add dependencies without a version number
     implementation 'io.projectreactor:reactor-core:3.4.17'
     implementation 'com.github.javafaker:javafaker:1.0.2'
-    implementation 'org.projectlombok:lombok:1.18.24'
+
     implementation 'io.projectreactor:reactor-test:3.4.17'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'

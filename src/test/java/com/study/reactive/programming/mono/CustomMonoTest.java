@@ -1,10 +1,9 @@
 package com.study.reactive.programming.mono;
 
+import com.study.reactive.programming.utils.StreamUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CustomMonoTest {
 
@@ -22,5 +21,21 @@ class CustomMonoTest {
     @Test
     void createMono() {
         customMono.createMono();
+    }
+
+    @Test
+    void buildAndExecutePipeLine() {
+        customMono.buildAndExecutePipeLine();
+    }
+
+    @Test
+    void createFromFuture() {
+        customMono.createFromFuture();
+        StreamUtils.sleepSeconds(1);
+    }
+
+    @Test
+    void executeTimeConsumingProcess() {
+        customMono.executeTimeConsumingProcess();
     }
 }
